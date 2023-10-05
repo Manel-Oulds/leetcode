@@ -30,6 +30,9 @@ def change_head(head)
             current = current.next      # current = nil              # current = 1
         end
         
+        if current.next
+                current.val +=1        # current.val = 1 +1 =2
+       
     end 
     head      # 0 -> 0 -> 1
     
