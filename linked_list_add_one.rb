@@ -32,7 +32,13 @@ def change_head(head)
         
         if current.next
                 current.val +=1        # current.val = 1 +1 =2
-       
+        else
+                new_node = Node.new()    # new_node
+                new_node.val = 1            # new_node.val = 1 
+                new_node.next = nil             #new_node.next = nil
+                # new_node.next = current 
+                current.next = new_node             # 0-> 0  -> 1
+        end
     end 
     head      # 0 -> 0 -> 1
     
