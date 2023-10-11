@@ -20,4 +20,10 @@ def set_zeroes(matrix)
         end
     end
 
+    zero_cols.each do |col|
+        for i in 0...rows
+          matrix[i][col] = 0
+        end
+      end
+
 end
