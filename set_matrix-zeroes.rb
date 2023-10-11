@@ -2,6 +2,7 @@
 # @param {Integer[][]} matrix
 # @return {Void} Do not return anything, modify matrix in-place instead.
 def set_zeroes(matrix)
+  # needs correction if matrix[0] is a number
     rows, cols = matrix.length, matrix[0].length
     zero_rows, zero_cols = [], []
   
@@ -27,3 +28,6 @@ def set_zeroes(matrix)
       end
 
 end
+
+
+p set_zeroes([1,2,3])
