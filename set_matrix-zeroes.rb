@@ -13,4 +13,11 @@ def set_zeroes(matrix)
         end
       end
     end
+
+    zero_rows.each do |row|
+        for j in 0...cols
+          matrix[row][j] = 0
+        end
+    end
+
 end
