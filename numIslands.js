@@ -28,4 +28,12 @@ function numIslands(grid) {
     // visited.push(ele_idx); // visited = [[0,0]]
     // }
   }
+
+  for(let i =0; i < grid.length; i++){
+    for(let j = 0; j < grid[0].length; j++){
+        if(grid[i,j]=== 1){
+            DFS([i,j]);         
+        }
+    }
+    }
 }
