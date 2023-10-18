@@ -18,3 +18,12 @@ class ListNode {
   
     return prev;  
   }
+
+  function printLinkedList(head) {
+    let current = head;
+    while (current !== null) {
+      process.stdout.write(current.val + " -> ");
+      current = current.next;
+    }
+    console.log("null");
+  }
