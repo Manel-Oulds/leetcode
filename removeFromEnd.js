@@ -28,4 +28,10 @@ function removeFromEnd(head, n) {  // head = 1 -> 2 -> 3 -> 4 -> 5, n = 5
            head = first.next;
            first.next = null;
        }
+
+       if(n > count ){
+        return head;
+         }
+
+
 }
