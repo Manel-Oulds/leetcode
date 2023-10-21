@@ -19,4 +19,13 @@ function removeFromEnd(head, n) {  // head = 1 -> 2 -> 3 -> 4 -> 5, n = 5
         count++; // count = 5; 
         p = p.next;// p-> null;
     }
+       // The element is in the position count - 5 = 0
+       const first = head;   // first -> 1
+       const second = head; // second -> 1
+       const c = 0;
+       
+       if(count === n){
+           head = first.next;
+           first.next = null;
+       }
 }
