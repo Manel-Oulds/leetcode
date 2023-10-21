@@ -47,3 +47,9 @@ function removeFromEnd(head, n) {  // head = 1 -> 2 -> 3 -> 4 -> 5, n = 5
         return head;
 
 }
+
+        function removeFromEnd2 (head, n){
+
+        }
+
+
