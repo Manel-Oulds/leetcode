@@ -11,3 +11,12 @@ Output: 1 -> 2 -> 3 -> 5
 4. return head
 */
 
+function removeFromEnd(head, n) {  // head = 1 -> 2 -> 3 -> 4 -> 5, n = 5
+    const p = head; // p: pointer ; 
+    const count = 0;
+    // length of the linked list
+    while (p !== null){
+        count++; // count = 5; 
+        p = p.next;// p-> null;
+    }
+}
