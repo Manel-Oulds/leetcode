@@ -39,4 +39,11 @@ function removeFromEnd(head, n) {  // head = 1 -> 2 -> 3 -> 4 -> 5, n = 5
             
         }
 
+        second = first.next; // element to remove // second -> 4
+    
+        first.next = second.next;  // 1->2->3->5<-4;
+        second.next = null;// 1->2->3->5    
+        
+        return head;
+
 }
