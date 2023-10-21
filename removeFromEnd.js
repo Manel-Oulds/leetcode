@@ -33,5 +33,10 @@ function removeFromEnd(head, n) {  // head = 1 -> 2 -> 3 -> 4 -> 5, n = 5
         return head;
          }
 
+        while(c !== count - n -1){ // c !== 3
+            first = first.next; // first is pointing to the element before the ele to remove; first -> 3; 
+            c++; // c= 3
+            
+        }
 
 }
