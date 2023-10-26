@@ -36,6 +36,10 @@ class BinarySearchTree {
           }
         }
     }
+    
+    findLowestCommonAncestor(node1, node2) {
+        return this.findLowestCommonAncestorRecursive(this.root, node1, node2);
+    }
 
 }
   
