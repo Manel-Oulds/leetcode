@@ -36,10 +36,27 @@ class BinarySearchTree {
           }
         }
     }
-    
+
     findLowestCommonAncestor(node1, node2) {
         return this.findLowestCommonAncestorRecursive(this.root, node1, node2);
     }
+
+    findLowestCommonAncestorRecursive(node, node1, node2) {
+        if (!node) return null;
+    
+        if (node.data === node1 || node.data === node2) {
+          return node;
+        }
+    
+        const leftLCA = this.findLowestCommonAncestorRecursive(node.left, node1, node2);
+        const rightLCA = this.findLowestCommonAncestorRecursive(node.right, node1, node2);
+    
+        if (leftLCA && rightLCA) {
+          return node;
+        }
+    
+        return leftLCA ? leftLCA : rightLCA;
+      }
 
 }
   
