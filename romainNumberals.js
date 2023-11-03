@@ -29,6 +29,16 @@
 
     };
     let j =0;
-    
+    while (j < s.length-1){ 
+        if (symbolValue[s[j]] < symbolValue[s[j+1]]){  
+            counter+= symbolValue[s[j+1]] - symbolValue[s[j]]; 
+            j+=2; 
+        } 
+        else{
+            counter+= symbolValue[s[j]];   
+            j++;    
+        }
+    }
+    return counter;
     
 };
