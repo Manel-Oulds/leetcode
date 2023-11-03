@@ -39,6 +39,11 @@
             j++;    
         }
     }
-    return counter;
     
+    
+    if(j < s.length){ 
+        counter+= symbolValue[s[j]]; 
+    }
+
+    return counter;
 };
