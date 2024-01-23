@@ -34,7 +34,7 @@ class PriorityQueue {
         const nodes = new PriorityQueue();
         const distances = {};
         const previous = {};
-        let path = []; // to return at the end
+        let path = []; 
         let smallest;
     // Build up initial state
     for (let vertex in this.adjacencyList) {
@@ -47,7 +47,18 @@ class PriorityQueue {
         }
         previous[vertex] = null;
       }
+
+      while (nodes.values.length) {
+        smallest = nodes.dequeue().value;
+        if (smallest === finish) {
+          // We are done, build up the path to return
+          while (previous[smallest]) {
+            path.push(smallest);
+            smallest = previous[smallest];
+          }
+          break;
+        }
     }
 
 
-}
+      }
