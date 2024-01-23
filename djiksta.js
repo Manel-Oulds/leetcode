@@ -85,3 +85,21 @@ class PriorityQueue {
       return path.concat(smallest).reverse();
     }
   }
+
+
+  //Testing
+  const graph = new Graph();
+
+graph.addVertex("A");
+graph.addVertex("B");
+graph.addVertex("C");
+graph.addVertex("D");
+graph.addVertex("E");
+
+graph.addEdge("A", "B", 4);
+graph.addEdge("A", "C", 2);
+graph.addEdge("B", "E", 3);
+graph.addEdge("C", "D", 2);
+graph.addEdge("D", "E", 3);
+
+console.log(graph.dijkstra("A", "E"));
