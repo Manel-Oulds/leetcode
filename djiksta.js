@@ -58,7 +58,29 @@ class PriorityQueue {
           }
           break;
         }
+        if (distances[smallest] !== Infinity) {
+            for (let neighbor in this.adjacencyList[smallest]) {
+              // Find neighboring node
+              let nextNode = this.adjacencyList[smallest][neighbor];
+              // Calculate new distance to neighboring node
+              let potential = distances[smallest] + nextNode.weight;
+              let nextNeighbor = nextNode.node;
+    
+              if (potential < distances[nextNeighbor]) {
+                // Updating new smallest distance to neighbor
+                distances[nextNeighbor] = potential;
+                // Updating previous - How we got to neighbor
+                previous[nextNeighbor] = smallest;
+                // Enqueue in priority queue with new priority
+                nodes.enqueue(nextNeighbor, potential);
+              }
+            }
     }
 
 
+
       }
+
+
+
+    }
