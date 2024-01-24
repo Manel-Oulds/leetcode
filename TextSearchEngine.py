@@ -15,7 +15,9 @@ class TextSearchEngine:
             # Preprocess the document: convert to lowercase and extract alphanumeric words
             document_words = re.findall(r'\b\w+\b', document.lower())
 
-            
+            # Check if all query words are present in the document
+            if all(word in document_words for word in query_words):
+                matching_indices.append(i)
 
         
 
