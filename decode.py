@@ -3,7 +3,10 @@ def decode(file):
     with open(file, "r") as f:
         line = f.readline()
         while line:
-            print(line)
+            n, val = line.split(" ")
+            hash_words[n] =val
             line = f.readline()
+    print(hash_words)
+    
 
 decode("fils.txt")
