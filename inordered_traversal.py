@@ -25,3 +25,12 @@ def inorder_helper(node, result):
         inorder_helper(node.right, result)
 
 
+# Test 
+root = TreeNode(1)
+root.left = TreeNode(2, TreeNode(4), TreeNode(5))
+root.right = TreeNode(3)
+
+result = inorder_traversal(root)
+print(result)
+
+
