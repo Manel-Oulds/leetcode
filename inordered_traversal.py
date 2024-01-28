@@ -7,3 +7,9 @@ class TreeNode:
         self.value = value
         self.left = left
         self.right = right
+
+def inorder_traversal(root):
+    result = []  # To store the inorder traversal result
+    inorder_helper(root, result)
+    return result
+
