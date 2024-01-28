@@ -13,3 +13,15 @@ def inorder_traversal(root):
     inorder_helper(root, result)
     return result
 
+def inorder_helper(node, result):
+    if node:
+        # Traverse the left subtree
+        inorder_helper(node.left, result)
+        
+        # Visit the current node (append its value to the result)
+        result.append(node.value)
+        
+        # Traverse the right subtree
+        inorder_helper(node.right, result)
+
+
