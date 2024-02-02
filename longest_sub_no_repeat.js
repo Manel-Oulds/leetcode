@@ -26,5 +26,8 @@ function lengthOfLongestSubstring(s) {
     return maxLength;
   }
   
- 
+  // Test the function
+  const inputString = "abcabcbb";
+  const result = lengthOfLongestSubstring(inputString);
+  console.log(result); // Output: 3
   
