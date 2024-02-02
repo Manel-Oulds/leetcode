@@ -18,6 +18,9 @@ function lengthOfLongestSubstring(s) {
   
       // Update the index of the current character in the map
       charIndexMap.set(currentChar, end);
+  
+      // Update the maximum length
+      maxLength = Math.max(maxLength, end - start + 1);
     }
   
     return maxLength;
