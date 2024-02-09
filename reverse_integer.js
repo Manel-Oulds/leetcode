@@ -21,3 +21,7 @@ function reverseInteger(x) {
     return reversed;
 }
 
+// Test the function
+console.log(reverseInteger(123)); // Output: 321
+console.log(reverseInteger(-123)); // Output: -321
+console.log(reverseInteger(120)); // Output: 21
