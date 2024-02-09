@@ -9,7 +9,12 @@ function isValidSudoku(board) {
                 const colStr = `col ${j} ${currentVal}`;
                 const boxStr = `box ${Math.floor(i / 3)}-${Math.floor(j / 3)} ${currentVal}`;
 
-               
+                if (seen.has(rowStr) || seen.has(colStr) || seen.has(boxStr)) {
+                    return false;
+                }
+                seen.add(rowStr);
+                seen.add(colStr);
+                seen.add(boxStr);
             }
         }
     }
