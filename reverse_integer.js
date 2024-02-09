@@ -11,7 +11,9 @@ function reverseInteger(x) {
             return 0;
         }
 
-       
+        if (reversed < MIN_INT / 10 || (reversed === MIN_INT / 10 && digit < -8)) {
+            return 0;
+        }
 
         reversed = reversed * 10 + digit;
     }
