@@ -8,6 +8,13 @@ function longestSubarrayWithOnes(nums, k) {
             maxOnesCount++;
         }
 
+        while (right - left + 1 - maxOnesCount > k) {
+            if (nums[left] === 1) {
+                maxOnesCount--;
+            }
+        
+        }
+
        
     }
 
