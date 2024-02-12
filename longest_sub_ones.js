@@ -21,3 +21,5 @@ function longestSubarrayWithOnes(nums, k) {
     return maxLength;
 }
 
+// Test the function
+console.log(longestSubarrayWithOnes([1, 1, 0, 0, 1, 1, 1, 0, 0, 0], 2)); // Output: 6
