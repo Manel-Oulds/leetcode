@@ -12,10 +12,10 @@ function longestSubarrayWithOnes(nums, k) {
             if (nums[left] === 1) {
                 maxOnesCount--;
             }
-        
+            left++;
         }
 
-       
+    
     }
 
     return maxLength;
