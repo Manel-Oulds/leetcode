@@ -15,6 +15,17 @@ function removeNthFromEnd(head, n) {
     for (let i = 0; i <= n; i++) {
         first = first.next;
     }
+
+    // Move first to the end, maintaining the gap
+    while (first !== null) {
+        first = first.next;
+        second = second.next;
+    }
+
+    // Remove the nth node from the end
+    second.next = second.next.next;
+
+    return dummy.next;
 }
 
 
