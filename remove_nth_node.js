@@ -28,4 +28,12 @@ function removeNthFromEnd(head, n) {
     return dummy.next;
 }
 
-
+// Test the function
+const head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+const n = 2;
+const newHead = removeNthFromEnd(head, n);
+let current = newHead;
+while (current !== null) {
+    console.log(current.val);
+    current = current.next;
+}
