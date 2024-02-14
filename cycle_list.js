@@ -6,7 +6,9 @@ class ListNode {
 }
 
 function hasCycle(head) {
-    
+    if (!head || !head.next) {
+        return false; // No cycle if list has 0 or 1 node
+    }
 
     let slow = head;
     let fast = head.next;
