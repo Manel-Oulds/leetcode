@@ -30,3 +30,12 @@ function addTwoNumbers(l1, l2) {
     return dummyHead.next;
 }
 
+// Test the function
+const l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+const l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
+
+let sumList = addTwoNumbers(l1, l2);
+while (sumList !== null) {
+    console.log(sumList.val);
+    sumList = sumList.next;
+}
