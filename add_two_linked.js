@@ -15,7 +15,8 @@ function addTwoNumbers(l1, l2) {
         const y = l2 ? l2.val : 0;
         const sum = x + y + carry;
 
-       
+        if (l1) l1 = l1.next;
+        if (l2) l2 = l2.next;
     }
 
 }
