@@ -35,3 +35,5 @@ function canFinish(numCourses, prerequisites) {
     return count === numCourses;
 }
 
+// Test the function
+console.log(canFinish(4, [[1,0],[2,0],[3,1],[3,2]])); // Output: true
