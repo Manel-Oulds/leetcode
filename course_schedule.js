@@ -17,7 +17,19 @@ function canFinish(numCourses, prerequisites) {
         }
     }
     
-  
+    // Perform topological sort using BFS
+    let count = 0;
+    while (queue.length) {
+        const current = queue.shift();
+        count++;
+        
+        for (let nextCourse of adjList[current]) {
+            inDegree[nextCourse]--;
+            if (inDegree[nextCourse] === 0) {
+                queue.push(nextCourse);
+            }
+        }
+    }
     
    
 }
