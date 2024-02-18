@@ -31,6 +31,7 @@ function canFinish(numCourses, prerequisites) {
         }
     }
     
-   
+    // If all courses can be finished, count will be equal to numCourses
+    return count === numCourses;
 }
 
