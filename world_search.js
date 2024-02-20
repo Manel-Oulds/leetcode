@@ -24,8 +24,15 @@ function exist(board, word) {
         return found;
     };
 
-    
+    // Start DFS search from each cell
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            if (dfs(i, j, 0)) {
+                return true; // Word found
+            }
+        }
+    }
 
-   
+    return false;
 }
 
