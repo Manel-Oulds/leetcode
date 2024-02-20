@@ -11,8 +11,20 @@ function exist(board, word) {
             return false; // Out of bounds or mismatch
         }
 
-      
+        const temp = board[i][j]; // Save current character
+        board[i][j] = '#'; // Mark current cell as visited
 
-    return false;
+        // Explore neighboring cells recursively
+        const found = dfs(i + 1, j, index + 1) ||
+                     dfs(i - 1, j, index + 1) ||
+                     dfs(i, j + 1, index + 1) ||
+                     dfs(i, j - 1, index + 1);
+
+        
+    };
+
+    
+
+   
 }
 
