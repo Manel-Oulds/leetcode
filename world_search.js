@@ -20,7 +20,8 @@ function exist(board, word) {
                      dfs(i, j + 1, index + 1) ||
                      dfs(i, j - 1, index + 1);
 
-        
+        board[i][j] = temp; // Restore current character
+        return found;
     };
 
     
