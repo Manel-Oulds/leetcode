@@ -15,4 +15,13 @@ function isBipartite(graph) {
         return true;
     };
 
+     // Perform DFS on each uncolored node
+     for (let i = 0; i < graph.length; i++) {
+        if (!colors.has(i) && !dfs(i, 0)) { // Start DFS with color 0
+            return false;
+        }
+    }
+    return true;
+
+
 }
