@@ -16,3 +16,22 @@ function getIntersectionNode(headA, headB) {
 
     return pointerA;
 }
+
+// Test 
+
+const listA = new ListNode(4);
+listA.next = new ListNode(1);
+listA.next.next = new ListNode(8);
+listA.next.next.next = new ListNode(4);
+listA.next.next.next.next = new ListNode(5);
+
+const listB = new ListNode(5);
+listB.next = new ListNode(6);
+listB.next.next = listA.next.next; // Pointing to the intersection node
+
+const intersection = getIntersectionNode(listA, listB);
+if (intersection) {
+    console.log("Intersection node with value:", intersection.val);
+} else {
+    console.log("No intersection");
+}
