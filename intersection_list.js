@@ -6,6 +6,8 @@ class ListNode {
 }
 
 function getIntersectionNode(headA, headB) {
+    if (!headA || !headB) return null;
+
     let pointerA = headA;
     let pointerB = headB;
 
@@ -17,8 +19,10 @@ function getIntersectionNode(headA, headB) {
     return pointerA;
 }
 
-// Test 
-
+// Test the function
+// Construct the linked lists
+// List A:          4 -> 1 -> 8 -> 4 -> 5
+// List B:     5 -> 6 -> 1 -> 8 -> 4 -> 5
 const listA = new ListNode(4);
 listA.next = new ListNode(1);
 listA.next.next = new ListNode(8);
