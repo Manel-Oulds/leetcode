@@ -21,7 +21,14 @@ function isPalindrome(head) {
         return prev;
     };
 
-  
+    let slow = head;
+    let fast = head;
+
+    // Use fast and slow pointers to find the middle of the list
+    while (fast !== null && fast.next !== null) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
 
    
 
