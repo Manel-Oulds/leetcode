@@ -33,5 +33,14 @@ function isPalindrome(head) {
     // Reverse the second half of the list
     let reversedSecondHalf = reverseList(slow);
 
+    // Compare the first half with the reversed second half
+    while (reversedSecondHalf !== null) {
+        if (head.val !== reversedSecondHalf.val) {
+            return false; // Not a palindrome
+        }
+        head = head.next;
+        reversedSecondHalf = reversedSecondHalf.next;
+    }
 
+    return true; // Palindrome
 }
