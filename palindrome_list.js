@@ -30,7 +30,8 @@ function isPalindrome(head) {
         fast = fast.next.next;
     }
 
-   
+    // Reverse the second half of the list
+    let reversedSecondHalf = reverseList(slow);
 
 
 }
