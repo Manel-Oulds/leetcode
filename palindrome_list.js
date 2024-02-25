@@ -44,3 +44,12 @@ function isPalindrome(head) {
 
     return true; // Palindrome
 }
+
+// Test the function
+// Create the linked list: 1 -> 2 -> 2 -> 1
+const head = new ListNode(1);
+head.next = new ListNode(2);
+head.next.next = new ListNode(2);
+head.next.next.next = new ListNode(1);
+
+console.log(isPalindrome(head)); // Output: true
