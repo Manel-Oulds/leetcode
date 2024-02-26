@@ -32,5 +32,16 @@ function mergeTwoLists(l1, l2) {
     return dummy.next; // Return the head of the merged list
 }
 
+// Test the function
+// Create the first sorted linked list: 1 -> 2 -> 4
+const l1 = new ListNode(1);
+l1.next = new ListNode(2);
+l1.next.next = new ListNode(4);
 
+// Create the second sorted linked list: 1 -> 3 -> 4
+const l2 = new ListNode(1);
+l2.next = new ListNode(3);
+l2.next.next = new ListNode(4);
+
+const mergedList = mergeTwoLists(l1, l2);
 
