@@ -45,3 +45,11 @@ l2.next.next = new ListNode(4);
 
 const mergedList = mergeTwoLists(l1, l2);
 
+// Print the merged list
+let current = mergedList;
+let output = [];
+while (current !== null) {
+    output.push(current.val);
+    current = current.next;
+}
+console.log(output); // Output: [1, 1, 2, 3, 4, 4]
