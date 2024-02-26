@@ -21,6 +21,15 @@ function mergeTwoLists(l1, l2) {
         current = current.next;
     }
 
+    // Append the remaining nodes of the non-empty list to the merged list
+    if (l1 !== null) {
+        current.next = l1;
+    }
+    if (l2 !== null) {
+        current.next = l2;
+    }
+
+    return dummy.next; // Return the head of the merged list
 }
 
 
