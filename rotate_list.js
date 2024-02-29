@@ -30,7 +30,11 @@ function rotateRight(head, k) {
     }
     let newHead = newTail.next;
 
-   
+    // Update pointers to perform rotation
+    newTail.next = null;
+    tail.next = head;
+
+    return newHead;
 }
 
 
