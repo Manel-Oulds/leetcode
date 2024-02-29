@@ -27,6 +27,16 @@ function reorderList(head) {
     }
     slow.next = null; // Break the original list into two halves
 
-   
+    // Merge the two halves of the list
+    let first = head;
+    let second = prev;
+    while (second !== null) {
+        let nextTemp1 = first.next;
+        let nextTemp2 = second.next;
+        first.next = second;
+        second.next = nextTemp1;
+        first = nextTemp1;
+        second = nextTemp2;
+    }
 }
 
