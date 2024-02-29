@@ -20,9 +20,16 @@ function rotateRight(head, k) {
     // Adjust k to be within the length of the list
     k = k % length;
 
-   
+    // If k is zero, no rotation is needed
+    if (k === 0) return head;
 
-   
+    // Find the new head and new tail after rotation
+    let newTail = head;
+    for (let i = 0; i < length - k - 1; i++) {
+        newTail = newTail.next;
+    }
+    let newHead = newTail.next;
+
    
 }
 
