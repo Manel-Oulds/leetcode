@@ -16,7 +16,16 @@ function reorderList(head) {
         fast = fast.next.next;
     }
 
-
+    // Reverse the second half of the list
+    let prev = null;
+    let current = slow.next;
+    while (current !== null) {
+        let nextTemp = current.next;
+        current.next = prev;
+        prev = current;
+        current = nextTemp;
+    }
+    slow.next = null; // Break the original list into two halves
 
    
 }
