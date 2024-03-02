@@ -14,14 +14,19 @@ function flatten(head) {
     let current = head;
 
     while (current !== null || stack.length > 0) {
-    
+        if (current.child !== null) {
             if (current.next !== null) {
                 stack.push(current.next);
             }
             current.next = current.child;
             current.next.prev = current;
             current.child = null;
-      
+        } else if (current.next === null && stack.length > 0) {
+            current.next = stack.pop();
+            if (current.next !== null) {
+                current.next.prev = current;
+            }
+        }
 
         current = current.next;
     }
