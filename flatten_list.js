@@ -7,5 +7,14 @@ class Node {
     }
 }
 
+function flatten(head) {
+    if (!head) return null;
 
+    let stack = [];
+    let current = head;
+
+   
+
+    return head;
+}
 
