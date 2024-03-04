@@ -37,7 +37,9 @@ function reverseKGroup(head, k) {
         prev.next = next;
         groupTail.next = current;
 
-      
+        // Move prev to the last node of the reversed group
+        prev = groupTail;
+        length -= k;
     }
 
     return dummy.next; // Return the head of the modified list
