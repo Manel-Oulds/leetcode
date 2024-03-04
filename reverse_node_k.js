@@ -33,7 +33,9 @@ function reverseKGroup(head, k) {
             current = temp;
         }
 
-       
+        // Update pointers to connect the reversed group with the rest of the list
+        prev.next = next;
+        groupTail.next = current;
 
       
     }
