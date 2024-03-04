@@ -21,7 +21,22 @@ function reverseKGroup(head, k) {
         head = head.next;
     }
 
-  
+    // Reverse groups of size k
+    while (length >= k) {
+        // Reverse the group of size k
+        let next = null;
+        let groupTail = current;
+        for (let i = 0; i < k; i++) {
+            let temp = current.next;
+            current.next = next;
+            next = current;
+            current = temp;
+        }
+
+       
+
+      
+    }
 
     return dummy.next; // Return the head of the modified list
 }
