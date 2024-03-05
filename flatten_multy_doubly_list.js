@@ -21,7 +21,10 @@ function flatten(head) {
             current.next = current.child;
             current.next.prev = current;
             current.child = null;
-        } 
+        } else if (current.next === null && stack.length > 0) {
+            current.next = stack.pop();
+            current.next.prev = current;
+        }
         current = current.next;
     }
 
