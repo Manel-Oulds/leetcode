@@ -14,4 +14,6 @@ function lengthOfLongestSubstring(s) {
     return longestLength;
 }
 
-
+// Test the function
+const s = "abcabcbb";
+console.log(lengthOfLongestSubstring(s)); // Output: 3
