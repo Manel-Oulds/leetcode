@@ -7,7 +7,8 @@ function lengthOfLongestSubstring(s) {
         if (charMap.has(s[end]) && charMap.get(s[end]) >= start) {
             start = charMap.get(s[end]) + 1;
         }
-      
+        charMap.set(s[end], end);
+        longestLength = Math.max(longestLength, end - start + 1);
     }
 
     return longestLength;
