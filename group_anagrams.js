@@ -6,7 +6,11 @@ function groupAnagrams(strs) {
         // Sort the characters of the string to identify anagrams
         let sortedStr = str.split('').sort().join('');
 
-       
+        // Add the string to the map with its sorted version as the key
+        if (!anagramsMap.has(sortedStr)) {
+            anagramsMap.set(sortedStr, []);
+        }
+        anagramsMap.get(sortedStr).push(str);
     }
 
 
