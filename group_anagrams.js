@@ -13,6 +13,7 @@ function groupAnagrams(strs) {
         anagramsMap.get(sortedStr).push(str);
     }
 
-
+    // Convert the map values (arrays of anagrams) to an array of arrays
+    return Array.from(anagramsMap.values());
 }
 
