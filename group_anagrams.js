@@ -17,3 +17,6 @@ function groupAnagrams(strs) {
     return Array.from(anagramsMap.values());
 }
 
+// Test the function
+const strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
+console.log(groupAnagrams(strs));
