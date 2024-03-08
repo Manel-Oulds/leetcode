@@ -12,7 +12,10 @@ function merge(intervals) {
         if (currentInterval[0] <= lastMergedInterval[1]) {
             // Overlapping intervals, merge them
             lastMergedInterval[1] = Math.max(currentInterval[1], lastMergedInterval[1]);
-        } 
+        } else {
+            // Non-overlapping interval, add it to the merged list
+            merged.push(currentInterval);
+        }
     }
 
     return merged;
