@@ -5,6 +5,16 @@ function merge(intervals) {
 
     const merged = [intervals[0]];
 
-   
+    for (let i = 1; i < intervals.length; i++) {
+        const currentInterval = intervals[i];
+        const lastMergedInterval = merged[merged.length - 1];
+
+        if (currentInterval[0] <= lastMergedInterval[1]) {
+            // Overlapping intervals, merge them
+            lastMergedInterval[1] = Math.max(currentInterval[1], lastMergedInterval[1]);
+        } 
+    }
+
+    return merged;
 }
 
