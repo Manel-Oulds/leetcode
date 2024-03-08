@@ -21,3 +21,6 @@ function merge(intervals) {
     return merged;
 }
 
+// Test the function
+const intervals = [[1, 3], [2, 6], [8, 10], [15, 18]];
+console.log(merge(intervals)); // Output: [[1,6],[8,10],[15,18]]
