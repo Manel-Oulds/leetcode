@@ -6,5 +6,12 @@ class TreeNode {
     }
 }
 
+function maxPathSum(root) {
+    let maxSum = Number.MIN_SAFE_INTEGER;
 
+    
+
+  
+    return maxSum;
+}
 
