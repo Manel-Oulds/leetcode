@@ -28,3 +28,8 @@ function maxPathSum(root) {
     return maxSum;
 }
 
+// Test the function
+const root = new TreeNode(1);
+root.left = new TreeNode(2);
+root.right = new TreeNode(3);
+console.log(maxPathSum(root)); // Output: 6
