@@ -8,6 +8,9 @@ function rotate(matrix) {
         }
     }
 
-   
+    // Reverse each row to rotate the matrix 90 degrees clockwise
+    for (let i = 0; i < n; i++) {
+        matrix[i].reverse();
+    }
 }
 
