@@ -11,6 +11,16 @@ function setZeroes(matrix) {
         }
     }
 
+    // Step 2: Use the first row and first column to mark zero elements in the matrix
+    for (let i = 0; i < rows; i++) {
+        for (let j = 1; j < cols; j++) {
+            if (matrix[i][j] === 0) {
+                matrix[i][0] = 0; // Mark the first element of the row as zero
+                matrix[0][j] = 0; // Mark the first element of the column as zero
+            }
+        }
+    }
+
   
 }
 
