@@ -30,8 +30,18 @@ function setZeroes(matrix) {
         }
     }
 
-   
+    // Step 4: Set zeros for the first row if necessary
+    if (matrix[0][0] === 0) {
+        for (let j = 0; j < cols; j++) {
+            matrix[0][j] = 0;
+        }
+    }
 
-  
+    // Step 5: Set zeros for the first column if necessary
+    if (firstColZero) {
+        for (let i = 0; i < rows; i++) {
+            matrix[i][0] = 0;
+        }
+    }
 }
 
