@@ -45,3 +45,11 @@ function setZeroes(matrix) {
     }
 }
 
+// Test the function
+const matrix = [
+    [1, 1, 1],
+    [1, 0, 1],
+    [1, 1, 1]
+];
+setZeroes(matrix);
+console.log(matrix); // Output: [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
