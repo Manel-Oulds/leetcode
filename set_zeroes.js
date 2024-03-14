@@ -21,6 +21,17 @@ function setZeroes(matrix) {
         }
     }
 
+    // Step 3: Set zeros based on the marks in the first row and first column
+    for (let i = 1; i < rows; i++) {
+        for (let j = 1; j < cols; j++) {
+            if (matrix[i][0] === 0 || matrix[0][j] === 0) {
+                matrix[i][j] = 0;
+            }
+        }
+    }
+
+   
+
   
 }
 
