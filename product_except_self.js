@@ -9,7 +9,12 @@ function productExceptSelf(nums) {
         leftProduct *= nums[i];
     }
 
-   
+    // Calculate right products and update output array
+    let rightProduct = 1;
+    for (let i = n - 1; i >= 0; i--) {
+        output[i] *= rightProduct;
+        rightProduct *= nums[i];
+    }
 
     return output;
 }
