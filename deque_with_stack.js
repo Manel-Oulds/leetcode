@@ -31,3 +31,12 @@ class MyDeque {
     }
 
 }
+
+//Testing functions
+const deque = new MyDeque();
+deque.addFront(1);
+deque.addRear(2);
+console.log(deque.removeFront());//1
+console.log(deque.isEmpty());//False
+console.log(deque.removeRear());//2
+console.log(deque.isEmpty());//True
