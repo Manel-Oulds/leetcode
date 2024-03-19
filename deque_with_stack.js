@@ -21,9 +21,13 @@ class MyDeque {
     removeFront(){
         return this.stack1.pop();
     }
-    
+
     removeRear(){
         return this.stack1.shift();
+    }
+
+    isEmpty(){
+        return this.stack1.length == 0;
     }
 
 }
