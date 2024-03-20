@@ -33,3 +33,6 @@ function evaluateExpression(operand1, operand2, operator) {
     }
 }
 
+// Test the function
+const tokens = ["2", "1", "+", "3", "*"];
+console.log(evalRPN(tokens)); // Output: 9
