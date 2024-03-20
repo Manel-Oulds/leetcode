@@ -1,4 +1,19 @@
+function evalRPN(tokens) {
+    const stack = [];
 
+    for (const token of tokens) {
+        if (isOperator(token)) {
+            const operand2 = stack.pop();
+            const operand1 = stack.pop();
+            const result = evaluateExpression(operand1, operand2, token);
+            stack.push(result);
+        } else {
+            stack.push(parseInt(token));
+        }
+    }
+
+    return stack.pop();
+}
 
 function isOperator(token) {
     return token === '+' || token === '-' || token === '*' || token === '/';
