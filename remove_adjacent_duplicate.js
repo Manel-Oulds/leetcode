@@ -12,3 +12,6 @@ function removeDuplicates(s) {
     return stack.join(''); // Join the characters remaining in the stack to form the final string
 }
 
+// Test the function
+const s = "abbaca";
+console.log(removeDuplicates(s)); // Output: "ca"
