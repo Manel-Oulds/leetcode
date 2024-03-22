@@ -9,7 +9,9 @@ function searchMatrix(matrix, target) {
             return true;
         } else if (matrix[row][col] < target) {
             row++;
-        } 
+        } else {
+            col--;
+        }
     }
 
     return false;
