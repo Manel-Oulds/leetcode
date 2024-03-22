@@ -7,6 +7,8 @@ function searchMatrix(matrix, target) {
     while (row < matrix.length && col >= 0) {
         if (matrix[row][col] === target) {
             return true;
+        } else if (matrix[row][col] < target) {
+            row++;
         } 
     }
 
