@@ -18,4 +18,11 @@ function maximalSquare(matrix) {
     return maxSide * maxSide;
 }
 
-
+// Test the function
+const matrix = [
+  ["1", "0", "1", "0", "0"],
+  ["1", "0", "1", "1", "1"],
+  ["1", "1", "1", "1", "1"],
+  ["1", "0", "0", "1", "0"]
+];
+console.log(maximalSquare(matrix)); // Output: 4
