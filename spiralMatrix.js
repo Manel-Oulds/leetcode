@@ -23,7 +23,13 @@ function spiralOrder(matrix) {
         }
         right--;
 
-       
+        // Traverse bottom row from right to left
+        if (top <= bottom) {
+            for (let i = right; i >= left; i--) {
+                result.push(matrix[bottom][i]);
+            }
+            bottom--;
+        }
 
        
     }
