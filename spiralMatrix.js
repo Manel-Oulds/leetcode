@@ -17,7 +17,11 @@ function spiralOrder(matrix) {
         }
         top++;
 
-
+        // Traverse right column from top to bottom
+        for (let i = top; i <= bottom; i++) {
+            result.push(matrix[i][right]);
+        }
+        right--;
 
        
 
