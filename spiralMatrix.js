@@ -31,7 +31,13 @@ function spiralOrder(matrix) {
             bottom--;
         }
 
-       
+        // Traverse left column from bottom to top
+        if (left <= right) {
+            for (let i = bottom; i >= top; i--) {
+                result.push(matrix[i][left]);
+            }
+            left++;
+        }
     }
 
     return result;
