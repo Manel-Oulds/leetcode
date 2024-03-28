@@ -14,6 +14,13 @@ function trap(height) {
                 trappedWater += leftMax - height[left];
             }
             left++;
+        } else {
+            if (height[right] >= rightMax) {
+                rightMax = height[right];
+            } else {
+                trappedWater += rightMax - height[right];
+            }
+            right--;
         }
     }
 
