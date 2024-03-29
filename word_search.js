@@ -31,3 +31,11 @@ function exist(board, word) {
     return false; // Word not found
 }
 
+// Test the function
+const board = [
+  ['A','B','C','E'],
+  ['S','F','C','S'],
+  ['A','D','E','E']
+];
+const word = "ABCCED";
+console.log(exist(board, word)); // Output: true
