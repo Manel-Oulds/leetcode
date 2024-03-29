@@ -21,7 +21,12 @@ function exist(board, word) {
         return false;
     }
 
-  
+    // Iterate through each cell in the board
+    for (let i = 0; i < rows; i++) {
+        for (let j = 0; j < cols; j++) {
+            if (dfs(i, j, 0)) return true; // Start DFS from each cell
+        }
+    }
 
     return false; // Word not found
 }
